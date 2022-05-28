@@ -27,9 +27,14 @@ var questionsArr = [
     },
 ]
 // console.log(questionsArr.length)
+// questionsArr.forEach(element => console.log(element))
 
 function runQuiz() {
    for (var i = 0; i < questionsArr.length; i++) {
-    console.log(i) 
+    console.log(questionsArr[i].question)
+    console.log(questionsArr[i].answer)
+    var question = confirm(questionsArr[i].question)
+    var answer = questionsArr[i].answer
    }  
+   
 }
