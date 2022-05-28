@@ -35,6 +35,8 @@ function runQuiz() {
     console.log(questionsArr[i].answer)
     var question = confirm(questionsArr[i].question)
     var answer = questionsArr[i].answer
+    var score = (100 / question) * answer
+    console.log(score)
    }  
    
 }
