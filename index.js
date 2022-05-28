@@ -31,12 +31,18 @@ var questionsArr = [
 
 function runQuiz() {
    for (var i = 0; i < questionsArr.length; i++) {
-    console.log(questionsArr[i].question)
-    console.log(questionsArr[i].answer)
+    // console.log(questionsArr[i].question)
+    // console.log(questionsArr[i].answer)
     var question = confirm(questionsArr[i].question)
     var answer = questionsArr[i].answer
-    var score = (100 / question) * answer
-    console.log(score)
+    var score = (answer / question) * 100
+    // console.log(score)
    }  
+   
+//    if (question !== true) {
+//     alert("Incorrect")
+//    }
+   
+
    
 }
