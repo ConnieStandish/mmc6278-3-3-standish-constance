@@ -30,18 +30,28 @@ var questionsArr = [
 // questionsArr.forEach(element => console.log(element))
 
 function runQuiz() {
+    var numCorrect = 0
+
    for (var i = 0; i < questionsArr.length; i++) {
     // console.log(questionsArr[i].question)
     // console.log(questionsArr[i].answer)
     var question = confirm(questionsArr[i].question)
     var answer = questionsArr[i].answer
-    var score = (answer / question) * 100
+    if (question === true) {
+        numCorrect++
+    }
+    if (question === true) {
+        alert("Correct")
+       } else {
+        alert("Incorrect, the answer is " + answer)
+       }
     // console.log(score)
    }  
    
-//    if (question !== true) {
-//     alert("Incorrect")
-//    }
+   var score = Math.round((numCorrect / question) * 100)
+   alert(score + '%') 
+   
+   
    
 
    
