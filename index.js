@@ -37,22 +37,20 @@ function runQuiz() {
     // console.log(questionsArr[i].answer)
     var question = confirm(questionsArr[i].question)
     var answer = questionsArr[i].answer
-    if (question === true) {
-        numCorrect++
-    }
+    
     if (question === true) {
         alert("Correct")
        } else {
         alert("Incorrect, the answer is " + answer)
        }
+       if (question === true) {
+        numCorrect++
+    }
     // console.log(score)
    }  
    
    var score = Math.round((numCorrect / question) * 100)
    alert(score + '%') 
    
-   
-   
-
    
 }
