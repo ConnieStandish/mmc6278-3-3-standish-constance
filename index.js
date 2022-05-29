@@ -26,7 +26,7 @@ var questionsArr = [
         answer: true
     },
 ]
-// console.log(questionsArr.length)
+// console.log(typeof questionsArr.length)
 // questionsArr.forEach(element => console.log(element))
 
 function runQuiz() {
@@ -35,22 +35,23 @@ function runQuiz() {
    for (var i = 0; i < questionsArr.length; i++) {
     // console.log(questionsArr[i].question)
     // console.log(questionsArr[i].answer)
-    var question = confirm(questionsArr[i].question)
+    var response = confirm(questionsArr[i].question)
     var answer = questionsArr[i].answer
-    
-    if (question === true) {
+    if (response) {
+        numCorrect++
+    }
+    if (response === true) {
         alert("Correct")
        } else {
         alert("Incorrect, the answer is " + answer)
        }
-       if (question === true) {
-        numCorrect++
-    }
-    // console.log(score)
-   }  
+       
+   }
    
-   var score = Math.round((numCorrect / question) * 100)
-   alert(score + '%') 
+   
+   var score = Math.round((numCorrect / questionsArr.length) * 100)
+   alert(score + '%')
+   console.log(score) 
    
    
 }
