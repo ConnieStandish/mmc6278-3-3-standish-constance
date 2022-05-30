@@ -48,10 +48,14 @@ function runQuiz() {
        
    }
    
-   
    var score = Math.round((numCorrect / questionsArr.length) * 100)
+//    Math.floor(score)
+//    console.log(Math.round(score))
    alert(score + '%')
-   console.log(score) 
+
+// console.log(score) 
+
+// console.log(Math.floor(numCorrect/questionsArr.length * 100))
    
    
 }
